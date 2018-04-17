@@ -14,7 +14,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#53BFF7",
-    "navigationBarTitleText": "豆轻电影",
+    "navigationBarTitleText": "豆轻",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
