@@ -1,7 +1,7 @@
 <!--components/scroll/scroll.wxml-->
 <view class="scroll-wrap">
   <view class="nav-wrap">
-    <text class="nav-title">{{title}}</text>
+    <text class="nav-title">{{boxTitle}}</text>
     <navigator
       class="nav"
       url="/pages/search/search">

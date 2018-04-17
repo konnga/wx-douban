@@ -4,30 +4,23 @@
     <input type="text" placeholder="搜索" class="search-input" />
   </view>
   <view style='padding: 20rpx 0'>
-     <c-scroll>
+     <c-scroll boxTitle="正在热映">
       <card
         slot="init"
-        wx:for="{{listData}}"
+        wx:for="{{inTheatersData.subjects}}"
         wx:key="*this"
         card-class="text-overflow"
-        linkUrl="/pages/search/search"  imgUrl="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519142550.jpg"
-        text="{{item.name}}
+        linkUrl="/pages/search/search"
+        imgUrl="{{item.images.small}}"
+        text="{{item.title}}
       >
         <rate
           slot="rate"
-          stars="{{item.stars}}"
-          score="{{item.average}}"
+          stars="{{item.rating.stars}}"
+          score="{{item.rating.average}}"
         >
         </rate>
       </card>
      </c-scroll> 
   </view>
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}"       open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <span class="iconfont icon-star"></span>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view> -->
 </view>

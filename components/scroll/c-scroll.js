@@ -10,9 +10,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    title: {
+    boxTitle: {
       type: String,
-      value: '标题'
+      value: ''
     },
     list: {
       type: Array,

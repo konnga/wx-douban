@@ -45,13 +45,11 @@ Component({
     }
     const arrLength = 5 - arr.length;
     for (let j = 0; j < arrLength; j++) {
-      console.log(j);
       arr.push('iconfont icon-star gray-color');
     }
     this.setData({
       starsArr: arr
     })
-    console.log(this.data.starsArr);
   },
   /**
    * 组件的方法列表
