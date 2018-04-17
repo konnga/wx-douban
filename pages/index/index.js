@@ -4,18 +4,43 @@ const app = getApp()
 
 Page({
   data: {
+    listData: [
+      {
+        id: 1,
+        name: '经常请吃饭的漂亮姐姐',
+        average: 9.0,
+        stars: "38",
+        starsNum: [0,1],
+      },
+      {
+        id: 2,
+        name: '情书',
+        average: 9.1,
+        stars: "50",
+        starsNum: [0,1],
+      },
+      {
+        id: 3,
+        name: '夏日大作战',
+        average: 9.2,
+        stars: "45",
+        starsNum: [0],
+      },
+      {
+        id: 3,
+        name: '夏日大作战2',
+        average: 9.3,
+        stars: "35",
+        starsNum: [0,1,2],
+      }
+    ],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
+    // 获取用户数据
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

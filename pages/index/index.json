@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "c-scroll": "../../components/scroll/c-scroll"
+  }
+}
