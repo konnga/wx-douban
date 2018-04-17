@@ -4,7 +4,22 @@
     <input type="text" placeholder="搜索" class="search-input" />
   </view>
   <view style='padding: 20rpx 0'>
-     <c-scroll list="{{listData}}">
+     <c-scroll>
+      <card
+        slot="init"
+        wx:for="{{listData}}"
+        wx:key="*this"
+        card-class="text-overflow"
+        linkUrl="/pages/search/search"  imgUrl="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519142550.jpg"
+        text="{{item.name}}
+      >
+        <rate
+          slot="rate"
+          stars="{{item.stars}}"
+          score="{{item.average}}"
+        >
+        </rate>
+      </card>
      </c-scroll> 
   </view>
   <!-- <view class="userinfo">

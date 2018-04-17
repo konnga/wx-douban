@@ -13,5 +13,6 @@
     </navigator>
   </view>
   <text class="font-medium weight">{{text}}</text>
+  <slot name="meta"></slot>
   <slot name="rate"></slot>
 </view>

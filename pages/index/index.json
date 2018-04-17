@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "c-scroll": "../../components/scroll/c-scroll"
+    "c-scroll": "../../components/scroll/c-scroll",
+    "card": "../../components/card/card",
+    "rate": "../../components/rate/rate"
   }
 }

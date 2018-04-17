@@ -1,5 +1,8 @@
 // components/scroll/scroll.js
 Component({
+  options: {
+    multipleSlots: true
+  },
   externalClasses: [
     'scroll-class'
   ],
