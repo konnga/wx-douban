@@ -1,0 +1,31 @@
+/* components/scroll/scroll.wxss */
+@import '../../app.wxss';
+.scroll-wrap {
+  width: 100%;
+}
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.nav {
+  color: #53BFF7;
+}
+.nav-title {
+  font-weight: 500;
+}
+.nav-title::before {
+  content: '';
+  width: 10rpx;
+  padding-right: 10rpx;
+  border-left: 6rpx solid #53BFF7;
+}
+.nav-img {
+  width: 32rpx;
+  height: 26rpx;
+  line-height: 16rpx;
+}
+.card-wrap {
+  background:white;
+  white-space: nowrap;
+}

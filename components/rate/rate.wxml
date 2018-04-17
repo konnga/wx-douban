@@ -1,0 +1,12 @@
+<!--components/rate/rate.wxml-->
+<view class="rate-wrap">
+  <view class="star-wrap">
+    <text
+      wx:for="{{starsArr}}"
+      wx:key="index"
+      class="{{item}}"
+    >
+    </text>
+  </view>
+  <text class="">{{score}}</text>
+</view>

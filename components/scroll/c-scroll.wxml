@@ -1,0 +1,33 @@
+<!--components/scroll/scroll.wxml-->
+<view class="scroll-wrap">
+  <view class="nav-wrap">
+    <text class="nav-title">{{title}}</text>
+    <navigator
+      class="nav"
+      url="/pages/search/search">
+    更多
+    <image
+      class="nav-img"
+      src="../../assets/img/arrow-right.png" mode="aspectFill">
+    </image>
+    </navigator>
+  </view>
+  <scroll-view
+    scroll-x="true"
+    class="card-wrap">
+      <card
+        wx:for="{{list}}"
+        wx:key="*this"
+        card-class="text-overflow"
+        linkUrl="/pages/search/search"  imgUrl="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519142550.jpg"
+        text="{{item.name}}
+      >
+        <rate
+          slot="rate"
+          stars="{{item.stars}}"
+          score="{{item.average}}"
+        >
+        </rate>
+      </card>
+  </scroll-view>
+</view>

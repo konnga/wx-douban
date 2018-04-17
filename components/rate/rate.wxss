@@ -1,0 +1,10 @@
+/* components/rate/rate.wxss */
+@import '../../app.wxss';
+.rate-wrap {
+  display: flex;
+  justify-content: space-between; 
+}
+.stars-wrap {
+  display: inline-block;
+  padding-right: 10rpx;
+}
