@@ -1,0 +1,7 @@
+<!--components/loading/loading.wxml-->
+<view class="loading-wrap">
+  <view class="loading" wx:if="{{load}}">
+    <view class="stick"></view>
+  </view>
+  <slot></slot>
+</view>

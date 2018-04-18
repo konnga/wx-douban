@@ -1,0 +1,36 @@
+/* components/loading/loading.wxss */
+@import '../../app.wxss';
+.loading-wrap {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  padding: top;
+  height: 100%;
+  margin:auto;
+  vertical-align: middle;
+}
+.loading {
+  position: absolute;
+  z-index: 100;
+  height:200rpx;
+  width: 100%;
+  background: #fff;
+}
+.stick {
+  position: relative;
+  border-radius: 50%;
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 auto;
+  border: 5rpx solid rgba(83,191,247, .2);
+  border-top-color: #53BFF7;
+  animation: spin 1s infinite linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
