@@ -1,1 +1,7 @@
 /* pages/list/list.wxss */
+.list-wrapper {
+  height: 375rpx;
+}
+.list-more-load {
+  height: 50rpx;
+}

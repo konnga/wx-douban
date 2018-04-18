@@ -11,7 +11,7 @@ module.exports = function (api, params = {}) {
   return new Promise((resolve, reject) => {
     wx.request({
       url: `${URL2}/${api}`,
-      data: Object.assign({}, params),
+      data: Object.assign({}, { start: (params.page - 1) * params.count, count: params.count}),
       header: {'Content-Type': 'json'},
       success: resolve,
       fsail: reject

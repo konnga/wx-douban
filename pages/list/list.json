@@ -8,5 +8,7 @@
     "card": "../../components/card/card",
     "rate": "../../components/rate/rate",
     "loading": "../../components/loading/loading"
-  }
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 80
 }

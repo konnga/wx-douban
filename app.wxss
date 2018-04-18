@@ -20,6 +20,10 @@
 .gray-color {
   color: #e6e6e6;
 }
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
 .weight {
   font-weight: 600;
 }

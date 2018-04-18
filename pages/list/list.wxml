@@ -3,23 +3,29 @@
   <search></search>
   <loading load="{{listLoading}}">
     <view class="list-content">
-      <card
-      slot="init"
-      wx:for="{{listData.subjects}}"
-      wx:key="id"
-      card-class="text-overflow"
-      linkUrl="/pages/search/search"
-      imgUrl="{{item.images.small}}"
-      text="{{item.title}}
-      >
-        <rate
-          slot="rate"
-          stars="{{item.rating.stars}}"
-          score="{{item.rating.average}}"
+        <card
+        slot="init"
+        wx:for="{{subjectList}}"
+        wx:key="id"
+        card-class="text-overflow"
+        linkUrl="/pages/search/search"
+        imgUrl="{{item.images.small}}"
+        text="{{item.title}}
         >
-        </rate>
-      </card>
-    </view>
+          <rate
+            slot="rate"
+            stars="{{item.rating.stars}}"
+            score="{{item.rating.average}}"
+          >
+          </rate>
+        </card>
+      </view>
   </loading>
+  <loading
+    loading-class="list-more-load"
+    load="{{lowerLoad}}"></loading>
+  <view
+    class="font-small gray-color center"
+    wx:if="{{loadText}}">没有更多内容了</view>
 </view>
 

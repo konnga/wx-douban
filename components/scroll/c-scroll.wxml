@@ -1,5 +1,5 @@
 <!--components/scroll/scroll.wxml-->
-<view class="scroll-wrap">
+<view class="scroll-wrap scroll-class">
   <view class="nav-wrap">
     <text class="nav-title">{{boxTitle}}</text>
     <navigator

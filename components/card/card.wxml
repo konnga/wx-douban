@@ -1,6 +1,6 @@
 <!--components/card/card.wxml-->
 <view
-  class="card-wrap text-overflow">
+  class="card-wrap card-class">
   <view>
     <navigator url="{{linkUrl}}">
       <image
