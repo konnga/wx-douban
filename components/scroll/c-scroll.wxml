@@ -4,7 +4,7 @@
     <text class="nav-title">{{boxTitle}}</text>
     <navigator
       class="nav"
-      url="/pages/search/search">
+      url="{{moreLink}}">
     更多
     <image
       class="nav-img"
@@ -17,5 +17,6 @@
     class="card-wrap">
       <slot name="init"></slot>
       <slot name="meta"></slot>
+      <slot name="nodata"></slot>
   </scroll-view>
 </view>

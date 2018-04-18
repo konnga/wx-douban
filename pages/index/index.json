@@ -2,6 +2,8 @@
   "usingComponents": {
     "c-scroll": "../../components/scroll/c-scroll",
     "card": "../../components/card/card",
-    "rate": "../../components/rate/rate"
+    "rate": "../../components/rate/rate",
+    "loading": "../../components/loading/loading",
+    "search": "../../components/search/search"
   }
 }

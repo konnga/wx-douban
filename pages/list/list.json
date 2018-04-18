@@ -1,1 +1,12 @@
-{}
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#53BFF7",
+  "navigationBarTitleText": "豆轻",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "search": "../../components/search/search",
+    "card": "../../components/card/card",
+    "rate": "../../components/rate/rate",
+    "loading": "../../components/loading/loading"
+  }
+}

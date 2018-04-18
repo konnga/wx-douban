@@ -1,2 +1,25 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view classs="list-wrap">
+  <search></search>
+  <loading load="{{listLoading}}">
+    <view class="list-content">
+      <card
+      slot="init"
+      wx:for="{{listData.subjects}}"
+      wx:key="id"
+      card-class="text-overflow"
+      linkUrl="/pages/search/search"
+      imgUrl="{{item.images.small}}"
+      text="{{item.title}}
+      >
+        <rate
+          slot="rate"
+          stars="{{item.rating.stars}}"
+          score="{{item.rating.average}}"
+        >
+        </rate>
+      </card>
+    </view>
+  </loading>
+</view>
+

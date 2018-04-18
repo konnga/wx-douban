@@ -14,3 +14,6 @@
   background: #fff;
   border-radius: 10rpx;
 }
+.movies-wrap {
+  margin-top: 24rpx;
+}

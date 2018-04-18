@@ -1,40 +1,18 @@
-// pages/list/list.js
-const api = require('../../utils/doubanApi.js')
-const { movies } = require('../../utils/enums.js')
+// pages/account/account.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    listData: {
-      subjects: []
-    },
-    listLoading: true
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.type);
-    wx.setNavigationBarTitle({
-      title: movies[options.type].name,
-    })
-    api.getMovieByType(movies[options.type].url, {
-      page: 1,
-      count: 30
-    }).then((data) => {
-      this.setData({
-        listData: data,
-        listLoading: false
-      })
-    }).catch(() => {
-      this.setData({
-        listData: '暂无相关数据',
-        listLoading: false
-      })
-    })
+  
   },
 
   /**

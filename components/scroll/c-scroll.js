@@ -17,6 +17,10 @@ Component({
     list: {
       type: Array,
       value: []
+    },
+    moreLink: {
+      type: String,
+      valude: '/pages/list/list?id=1'
     }
   },
 
@@ -24,7 +28,6 @@ Component({
    * 组件的初始数据
    */
   data: {
-
   },
   ready: function () {
   },
