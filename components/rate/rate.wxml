@@ -1,5 +1,5 @@
 <!--components/rate/rate.wxml-->
-<view class="rate-wrap">
+<view class="rate-wrap font-small">
   <view class="star-wrap">
     <text
       wx:for="{{starsArr}}"

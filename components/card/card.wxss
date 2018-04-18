@@ -3,10 +3,10 @@
 .card-wrap {
   padding: 20rpx;
   display:inline-block;
-  width: 250rpx;
-  height: 460rpx; 
+  width: 210rpx;
+  height: 380rpx; 
 }
 .card-wrap .img {
   width: 100%;
-  height: 350rpx; 
+  height: 280rpx; 
 }
