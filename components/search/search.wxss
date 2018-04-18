@@ -1,0 +1,16 @@
+/* components/search/search.wxss */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 14px;
+  padding: 20rpx 0;
+  background: #53BFF7;
+}
+.search-input {
+  width: 90%;
+  height: 60rpx;
+  text-align: center;
+  background: #fff;
+  border-radius: 10rpx;
+}
