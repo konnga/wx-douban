@@ -30,7 +30,7 @@
         "text": "电影"
       },
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "pages/account/account",
         "iconPath": "./assets/img/my.png",
         "selectedIconPath": "./assets/img/my-active.png",
         "text": "我的"

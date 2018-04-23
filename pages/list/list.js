@@ -17,10 +17,12 @@ Page({
     loadText: false
   },
   loadMore: function () {
+    wx.showNavigationBarLoading()
     if (!this.data.ishasMore) {
       this.setData({
         loadText: true
       })
+      wx.hideNavigationBarLoading()
       return;
     }
     this.setData({
@@ -39,6 +41,7 @@ Page({
             ishasMore: false,
             lowerLoad: false
           })
+          wx.hideNavigationBarLoading()
           return;
         }
         this.setData({
@@ -46,11 +49,13 @@ Page({
           lowerLoad: false,
           listLoading: false
         })
+        wx.hideNavigationBarLoading()
       } else {
         this.setData({
           ishasMore: false,
           lowerLoad: false
         })
+        wx.hideNavigationBarLoading()
       }
     }).catch(() => {
       this.setData({
@@ -59,6 +64,7 @@ Page({
       })
       wx.showLoading({ title: '获取数据异常' })
       wx.hideLoading()
+      wx.hideNavigationBarLoading()
     })
   },
   /**
@@ -77,4 +83,8 @@ Page({
   onReachBottom: function () {
     this.loadMore();
   },
+  onPullDownRefresh: function () {
+    // 处理下拉刷新出现空白停顿
+    wx.stopPullDownRefresh()
+  }
 })

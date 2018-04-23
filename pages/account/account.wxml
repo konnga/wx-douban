@@ -1,2 +1,36 @@
 <!--pages/account/account.wxml-->
-<text>pages/account/account.wxml</text>
+<view class="account-wrap">
+ <loading
+    loading-class="refresh"
+    wx:if="{{refresh}}">
+ </loading>
+ <view class="accout-info">
+  <view 
+    class="loginout-wrap font-small"
+  >
+    <view
+      wx:if="{{logged}}"
+      bindtap="loginout"
+      class="loginout-btn">
+      退出登录
+    </view>
+  </view>
+  <view>
+    <image
+      class="user-avatar"
+      src="{{avatarUrl}}"
+    >
+    </image>
+  </view>
+  <view wx:if="{{logged}}">{{userInfo.nickName}}</view>
+  <view
+    bindtap="handleClickLogin"
+    class="login-btn font-small center"
+    plain="true"
+    wx:else
+  >
+    登录
+  </view>
+ </view>
+ <view class="user-collection"></view> 
+</view>

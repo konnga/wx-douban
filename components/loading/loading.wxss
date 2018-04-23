@@ -4,7 +4,6 @@
   position: relative;
   background: #fff;
   width: 100%;
-  padding: top;
   height: 100%;
   margin:auto;
   vertical-align: middle;
