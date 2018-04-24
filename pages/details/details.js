@@ -1,11 +1,20 @@
 const api = require('../../utils/doubanApi.js')
 const { movies } = require('../../utils/enums.js')
 const util = require('../../utils/util.js')
+const appData = getApp().globalData;
 Page({
   data: {
-    detailData: {},
+    detailData: {
+      rating: {
+        score: 0
+      }
+    },
     detailLoading: true,
-    stars: '00'
+    longCommentsLoad: true,
+    shortCommentsLoad: true,
+    stars: '00',
+    shortComments: {},
+    longComments: {}
   },
   /**
    * 生命周期函数--监听页面加载
@@ -14,8 +23,8 @@ Page({
     wx.setNavigationBarTitle({
       title: options.title,
     })
-    console.log(this.data.stars);
     wx.showNavigationBarLoading();
+    // 获取电影详情
     api.getMovieDetail(options.id).then(data => {
       this.setData({
         detailData: data,
@@ -29,48 +38,20 @@ Page({
       wx.hideNavigationBarLoading();
       util.showModel('数据获取出错', '请稍后重试')
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
+    // 获取电影短评
+    api.getMovieComments(options.id, 'comments').then((data) => {
+      this.setData({
+        shortComments: data.comments.slice(0, 5),
+        shortCommentsLoad: false
+      })
+    })
+    // 获取电影长评
+    api.getMovieComments(options.id, 'reviews').then((data) => {
+      this.setData({
+        longComments: data.reviews.slice(0, 5),
+        longCommentsLoad: false
+      })
+    })
   },
 
   /**

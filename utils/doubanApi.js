@@ -14,4 +14,8 @@ api.getMovieDetail = (id) => {
   return fetch(`movie/subject/${id}`).then(res => res.data)
 }
 
+api.getMovieComments = (id, type) => {
+  return fetch(`movie/subject/${id}/${type}`).then(res => res.data)
+}
+
 module.exports = api

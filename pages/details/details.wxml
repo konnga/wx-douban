@@ -17,9 +17,7 @@
           <view>{{detailData.original_title}}</view>
           <view>
             <text class="font-large light-color">{{detailData.rating.average}}</text>
-            <rate
-              stars="{{detailData.rationg.stars}}">
-            </rate>
+            <rate score="{{detailData.rating.average}}"></rate>
             <text class="font-medium">{{detailData.ratings_count}}人评价</text>
           </view>
         </view>
@@ -49,11 +47,46 @@
       <view class="gray-color">剧情简介：</view>
       <text>{{detailData.summary}}</text>
     </view>
-    <view class="reviews-wrap-1 font-medium gray-color">
-      <view>短评({{detailData.comments_count}})</view>
+    <view class="reviews-wrap-1 font-medium">
+      <loading load="{{longCommentsLoad}}">
+        <view
+          class="gray-color">
+          短评({{detailData.comments_count}})</view>
+        <view
+          class="short-reviews"
+          wx:for="{{shortComments}}" wx:key="id">
+          <view class="author">
+            <image
+              class="author-avatar"
+              src="{{item.author.avatar}}"></image>
+          </view>
+          <view class="comments-info">
+            <text>{{item.author.name}}</text>
+            <rate score="{{item.rating.value * 2.0}}"></rate>
+            <view>{{item.created_at}}</view>
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+      </loading>
     </view>
-    <view class="reviews-wrap-2 font-medium gray-color">
-      <view>影评({{detailData.reviews_count}})</view>
+    <view class="reviews-wrap-2 font-small">
+      <loading load="{{longCommentsLoad}}">
+        <view
+        class="gray-color">影评({{detailData.reviews_count}})</view>
+        <view
+          class="long-comments"
+          wx:for="{{longComments}}"
+          wx:key="id">
+          <text class="font-medium weight">{{item.title}}</text>
+          <view class="long-infor">
+            <text>{{item.author.name}}</text>
+            <rate
+              class="rate-info"
+              score="{{item.rating.value * 2.0}}"></rate>
+            <text>{{item.useful_count}}有用</text>
+          </view>
+        </view>
+      </loading>
     </view>
   </loading>
 </view>

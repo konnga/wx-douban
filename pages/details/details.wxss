@@ -51,3 +51,31 @@
 .reviews-wrap-2 {
   padding: 0 40rpx;
 }
+.short-reviews {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10rpx 0;
+}
+.author {
+  height: 100%;
+}
+.author-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.comments-info {
+    text-align: justify;  
+}
+.long-comments {
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid rgba(214, 214, 214, .3);
+}
+.long-infor {
+  /* display: inline-block; */
+}
+.rate-info {
+  display: inline-block;
+  padding: 0 5rpx;
+}

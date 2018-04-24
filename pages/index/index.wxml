@@ -18,7 +18,6 @@
         >
           <rate
             slot="rate"
-            stars="{{item.rating.stars}}"
             score="{{item.rating.average}}"
           >
           </rate>
@@ -46,7 +45,6 @@
         >
           <rate
             slot="rate"
-            stars="{{item.rating.stars}}"
             score="{{item.rating.average}}"
           >
           </rate>
@@ -73,7 +71,6 @@
         >
           <rate
             slot="rate"
-            stars="{{item.rating.stars}}"
             score="{{item.rating.average}}"
           >
           </rate>
@@ -100,7 +97,6 @@
         >
           <rate
             slot="rate"
-            stars="{{item.rating.stars}}"
             score="{{item.rating.average}}"
           >
           </rate>

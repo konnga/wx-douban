@@ -2,9 +2,12 @@
 @import '../../app.wxss';
 .rate-wrap {
   display: flex;
-  justify-content: space-between; 
+  justify-content: flex-start; 
 }
 .stars-wrap {
   display: inline-block;
   padding-right: 10rpx;
+}
+.score {
+  padding-left: 10rpx;
 }

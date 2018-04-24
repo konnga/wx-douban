@@ -8,13 +8,12 @@
         wx:for="{{subjectList}}"
         wx:key="id"
         card-class="text-overflow"
-        linkUrl="/pages/search/search"
+        linkUrl="/pages/details/details?id={{item.id}}&title={{item.title}}"
         imgUrl="{{item.images.small}}"
         text="{{item.title}}
         >
           <rate
             slot="rate"
-            stars="{{item.rating.stars}}"
             score="{{item.rating.average}}"
           >
           </rate>
