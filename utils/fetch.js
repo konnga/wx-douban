@@ -7,11 +7,11 @@ const URL3 = 'http://t.yushu.im/v2';
  * @param {object} params - 请求参数
  * return {Promise}
  */
-module.exports = function (api, params = {}) {
+module.exports = function (api, params) {
   return new Promise((resolve, reject) => {
     wx.request({
       url: `${URL2}/${api}`,
-      data: Object.assign({}, { start: (params.page - 1) * params.count, count: params.count}),
+      data: params ? Object.assign({}, { start: (params.page - 1) * params.count, count: params.count}) : '',
       header: {'Content-Type': 'json'},
       success: resolve,
       fsail: reject

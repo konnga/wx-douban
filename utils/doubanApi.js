@@ -10,4 +10,8 @@ api.getMovieByType = (type, param) => {
   return fetch(`movie/${type}`, param).then(res => res.data)
 }
 
+api.getMovieDetail = (id) => {
+  return fetch(`movie/subject/${id}`).then(res => res.data)
+}
+
 module.exports = api

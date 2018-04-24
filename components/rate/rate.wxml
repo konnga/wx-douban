@@ -8,5 +8,5 @@
     >
     </text>
   </view>
-  <text class="">{{score}}</text>
+  <text wx:if="{{score}}" class="">{{score}}</text>
 </view>

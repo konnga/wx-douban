@@ -1,18 +1,34 @@
-// pages/details/details.js
+const api = require('../../utils/doubanApi.js')
+const { movies } = require('../../utils/enums.js')
+const util = require('../../utils/util.js')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    detailData: {},
+    detailLoading: true,
+    stars: '00'
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.setNavigationBarTitle({
+      title: options.title,
+    })
+    console.log(this.data.stars);
+    wx.showNavigationBarLoading();
+    api.getMovieDetail(options.id).then(data => {
+      this.setData({
+        detailData: data,
+        detailLoading: false
+      })
+      wx.hideNavigationBarLoading();
+    }).catch(() => {
+      this.setData({
+        detailLoading: false
+      })
+      wx.hideNavigationBarLoading();
+      util.showModel('数据获取出错', '请稍后重试')
+    })
   },
 
   /**

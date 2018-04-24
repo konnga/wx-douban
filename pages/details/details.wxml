@@ -1,2 +1,59 @@
-<!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+<view class="details-wrap">
+  <loading load="{{detailLoading}}">
+    <view class="title-wrap">
+      <view class="bg-wrap">
+        <image
+          class="bg-img"
+          src="{{detailData.images.small}}">
+        </image>
+      </view>
+      <view class="title-cover">
+        <image
+          class="title-img"
+          src="{{detailData.images.small}}">
+        </image>
+        <view class="title-text">
+          <view>{{detailData.title}}</view>
+          <view>{{detailData.original_title}}</view>
+          <view>
+            <text class="font-large light-color">{{detailData.rating.average}}</text>
+            <rate
+              stars="{{detailData.rationg.stars}}">
+            </rate>
+            <text class="font-medium">{{detailData.ratings_count}}人评价</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="info-wrap font-medium">
+      <view>
+        <text>{{detailData.durations[0]}}</text>
+        <text
+          wx:for="{{detailData.genres}}"
+          wx:key="*this">{{item}}/</text>
+      </view>
+      <view>
+        <text>{{detailData.mainland_pubdate}}</text>
+        <text>{{detailData.countries[0]}}</text>
+      </view>
+      <view>
+        <text
+          wx:for="{{detailData.directors}}"
+          wx:key="*this">{{item.name}}（导演）</text>
+        <text
+          wx:for="{{detailData.casts}}"
+          wx:key="*this">{{item.name}}/</text>
+      </view>
+    </view>
+    <view class="summary-wrap font-medium">
+      <view class="gray-color">剧情简介：</view>
+      <text>{{detailData.summary}}</text>
+    </view>
+    <view class="reviews-wrap-1 font-medium gray-color">
+      <view>短评({{detailData.comments_count}})</view>
+    </view>
+    <view class="reviews-wrap-2 font-medium gray-color">
+      <view>影评({{detailData.reviews_count}})</view>
+    </view>
+  </loading>
+</view>

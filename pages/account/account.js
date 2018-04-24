@@ -44,7 +44,6 @@ Page({
           data: true,
         })
         wx.stopPullDownRefresh()
-        wx.hideNavigationBarLoading()
         wx.hideToast()
       },
       fail: () => {
@@ -57,9 +56,8 @@ Page({
           title: '登陆失败，请稍后重试'
         })
         wx.stopPullDownRefresh()
-        wx.hideNavigationBarLoading()
         wx.hideToast()
-        utils.showModel('登陆失败', '请稍后重试')
+        util.showModel('登陆失败', '请稍后重试')
       }
     })
   },

@@ -18,7 +18,7 @@
   color: #53BFF7;
 }
 .gray-color {
-  color: #e6e6e6;
+  color: #DCDCDC;
 }
 .center {
   text-align: center;

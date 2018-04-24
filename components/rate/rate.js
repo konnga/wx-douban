@@ -13,7 +13,7 @@ Component({
     },
     score: {
       type: String,
-      value: '0'
+      value: 0
     },
     starType: {
       type: String,
@@ -28,15 +28,18 @@ Component({
     starsArr: []
   },
   /**
-   * 组件生命周期函数，在组件实例进入页面节点树时执行
+   * 生命周期函数--监听页面加载
    */
+  onLoad: function (options) {
+    this.attached();
+  },
   /** 
    * 绘制rate评分
   */
   attached: function() {
     let arr = [];
-    let x = this.data.stars.slice(0, 1);
-    let y = this.data.stars.slice(1);
+    const x = this.data.stars.slice(0, 1);
+    const y = this.data.stars.slice(1);
     for (let i = 0; i < x; i++) {
       arr.push('iconfont icon-star light-color');
     }
@@ -50,10 +53,5 @@ Component({
     this.setData({
       starsArr: arr
     })
-  },
-  /**
-   * 组件的方法列表
-   */
-  methods: {
   }
 })

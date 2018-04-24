@@ -1,1 +1,53 @@
-/* pages/details/details.wxss */
+.details-wrap {
+  color: #111;
+}
+.title-wrap {
+  position: relative;
+}
+.bg-wrap {
+  position:relative;
+  overflow:hidden;
+  height:240px;
+  background:rgba(0, 0, 0, .8);
+}
+.bg-img {
+  position: absolute;
+  width: 100%;
+  height: 1000rpx;
+}
+.title-cover {
+  position:absolute;
+  width:100%;
+  height:480rpx;
+  background:rgba(0, 0, 0, .7);
+  top:0;
+}
+.title-img {
+  position: absolute;
+  bottom: -30rpx;
+  left: 40rpx;
+  z-index: 100;
+  width: 200rpx;
+  height: 300rpx;
+}
+.title-text {
+  position: absolute;
+  z-index: 101;
+  bottom: 0;
+  left: 250rpx;
+  color: #fff;
+}
+.info-wrap {
+  padding: 50rpx 40rpx;
+  color: #111;
+}
+.summary-wrap {
+  padding: 0 40rpx;
+  color: #111;
+}
+.reviews-wrap-1 {
+  padding: 50rpx 40rpx;
+}
+.reviews-wrap-2 {
+  padding: 0 40rpx;
+}

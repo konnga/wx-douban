@@ -19,7 +19,7 @@
           >
           </rate>
         </card>
-      </view>
+    </view>
   </loading>
   <loading
     loading-class="list-more-load"
