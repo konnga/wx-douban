@@ -14,21 +14,31 @@
         </image>
         <view class="title-text">
           <view>{{detailData.title}}</view>
-          <view>{{detailData.original_title}}</view>
-          <view>
-            <text class="font-large light-color">{{detailData.rating.average}}</text>
-            <rate score="{{detailData.rating.average}}"></rate>
-            <text class="font-medium">{{detailData.ratings_count}}人评价</text>
-          </view>
+           <view>{{detailData.original_title}}</view> 
+           <view
+            class="font-large light-color">
+            {{detailData.rating.average}}
+           </view>
+           <rate score="{{detailData.rating.average || 0}}"></rate>
+           <view
+              class="font-medium">
+              {{detailData.ratings_count}}人评价
+            </view>
         </view>
+        <view
+          class="collection"
+          data-detail="{{detailData}}"
+          bindtap="handleCollection">
+          <view class="{{collectionActive}}"></view>
+        </view> 
       </view>
     </view>
     <view class="info-wrap font-medium">
       <view>
-        <text>{{detailData.durations[0]}}</text>
+        <text>{{detailData.durations[0]}}/</text>
         <text
           wx:for="{{detailData.genres}}"
-          wx:key="*this">{{item}}/</text>
+          wx:key="index">{{item}}/</text>
       </view>
       <view>
         <text>{{detailData.mainland_pubdate}}</text>
@@ -37,11 +47,22 @@
       <view>
         <text
           wx:for="{{detailData.directors}}"
-          wx:key="*this">{{item.name}}（导演）</text>
+          wx:key="index">{{item.name}}（导演）</text>
         <text
           wx:for="{{detailData.casts}}"
-          wx:key="*this">{{item.name}}/</text>
+          wx:key="index">{{item.name}}/</text>
       </view>
+    </view>
+    <view class="photos-wrap">
+      <c-scroll boxTitle="剧照：">
+        <card
+          slot="init"
+          wx:for="{{detailData.photos}}"
+          wx:key="id"
+          imgUrl="{{item.image}}"
+        >
+        </card>
+      </c-scroll>
     </view>
     <view class="summary-wrap font-medium">
       <view class="gray-color">剧情简介：</view>

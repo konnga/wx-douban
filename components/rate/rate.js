@@ -3,27 +3,12 @@ Component({
   externalClasses: [
     'rate-class'
   ],
-  /**
-   * 组件的属性列表
-   */
   properties: {
-    stars: {
-      type: String,
-      value: '00'
-    },
     score: {
-      type: String,
+      type: Number,
       value: 0
-    },
-    starType: {
-      type: String,
-      value: 'star light-color'
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
     starsArr: []
   },
@@ -51,20 +36,6 @@ Component({
     for (let j = 0; j < arrLength; j++) {
       a.push('iconfont icon-star gray-color');
     }
-
-    // let arr = [];
-    // const x = this.data.stars.slice(0, 1);
-    // const y = this.data.stars.slice(1);
-    // for (let i = 0; i < x; i++) {
-    //   arr.push('iconfont icon-star light-color');
-    // }
-    // if (y && y !== "0") {
-    //   arr.push('iconfont icon-star-half light-color');
-    // }
-    // const arrLength = 5 - arr.length;
-    // for (let j = 0; j < arrLength; j++) {
-    //   arr.push('iconfont icon-star gray-color');
-    // }
     this.setData({
       starsArr: a
     })

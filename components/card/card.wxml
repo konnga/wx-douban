@@ -1,14 +1,8 @@
 <!--components/card/card.wxml-->
-<view
-  class="card-wrap card-class">
+<view class="card-wrap card-class">
   <view>
     <navigator url="{{linkUrl}}">
-      <image
-        class="img"
-        lazy-load="true"
-        src="{{imgUrl}}"
-        mode="aspectFill"
-      >
+      <image class="img" lazy-load="true" src="{{imgUrl}}" mode="aspectFill">
       </image>
     </navigator>
   </view>

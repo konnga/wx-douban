@@ -37,6 +37,18 @@
   left: 250rpx;
   color: #fff;
 }
+.collection {
+  position: absolute;
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  border: 1px solid #d6d6d6;
+  text-align: center;
+  line-height: 64rpx;
+  top: 20rpx;
+  right: 20rpx;
+  font-size: 48rpx;
+}
 .info-wrap {
   padding: 50rpx 40rpx;
   color: #111;
@@ -71,9 +83,6 @@
 .long-comments {
   padding: 20rpx 0;
   border-bottom: 2rpx solid rgba(214, 214, 214, .3);
-}
-.long-infor {
-  /* display: inline-block; */
 }
 .rate-info {
   display: inline-block;

@@ -1,8 +1,11 @@
 <!--components/scroll/scroll.wxml-->
 <view class="scroll-wrap scroll-class">
   <view class="nav-wrap">
-    <text class="nav-title">{{boxTitle}}</text>
+    <text
+      wx:if="{{boxTitle}}"
+      class="nav-title">{{boxTitle}}</text>
     <navigator
+      wx:if="{{moreLink}}"
       class="nav"
       url="{{moreLink}}">
     更多

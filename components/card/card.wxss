@@ -1,12 +1,9 @@
-/* components/card/card.wxss */
-@import '../../app.wxss';
 .card-wrap {
   padding: 20rpx;
   display:inline-block;
   width: 210rpx;
-  height: 380rpx; 
 }
 .card-wrap .img {
   width: 100%;
-  height: 280rpx; 
+  height: 280rpx;  
 }
