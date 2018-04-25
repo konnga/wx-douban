@@ -6,10 +6,14 @@ Page({
     refresh: false,
     logged: false,
     avatarUrl: '../../assets/img/user-unlogin.png',
-    title: '正在登陆...'
+    title: '正在登陆...',
+    collectionCache: []
   },
   onLoad: function (options) {
     this.isLogin();
+  },
+  onShow: function () {
+    this.getUserCollec();
   },
   onPullDownRefresh: function () {
     if (this.isLogin()) {
@@ -43,6 +47,7 @@ Page({
           key: 'logged',
           data: true,
         })
+        this.getUserCollec();
         wx.stopPullDownRefresh()
         wx.hideToast()
       },
@@ -61,7 +66,7 @@ Page({
       }
     })
   },
-  loginout: function () {
+  loginout () {
     this.setData({
       userInfo: {},
       avatarUrl: '../../assets/img/user-unlogin.png',
@@ -69,14 +74,30 @@ Page({
     })
     wx.clearStorage();
   },
-  isLogin: function () {
+  getUserCollec () {
+    const that = this;
+    wx.getStorage({
+      key: 'collectionList',
+      success: function (res) {
+        that.setData({
+          collectionCache: res.data
+        })
+      },
+      fail: function (res) {
+        wx.setStorage({
+          key: 'collectionList',
+          data: []
+        })
+      }
+    })
+  },
+  isLogin () {
     this.setData({
       logged: wx.getStorageSync('logged') || false,
     })
     if (this.data.logged) {
       // 同步操作导致页面出现停顿，后续处理
       const userStorage = wx.getStorageSync('userInfo');
-      console.log(wx.getStorageSync('userInfo'))
       this.setData({
         userInfo: userStorage,
         avatarUrl: userStorage.avatarUrl,

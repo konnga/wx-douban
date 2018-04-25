@@ -32,5 +32,31 @@
     登录
   </view>
  </view>
- <view class="user-collection"></view> 
+ <view wx:if="{{logged}}" class="user-collection">
+    <c-scroll
+      boxTitle="我的收藏"
+    >
+      <card
+        wx:if="{{collectionCache.length > 0}}"
+        slot="init"
+        wx:for="{{collectionCache}}"
+        wx:key="id"
+        card-class="text-overflow"
+        linkUrl="/pages/details/details?id={{item.id}}&title={{item.title}}&score={{item.score}}"
+        imgUrl="{{item.imgUrl}}"
+        text="{{item.title}}
+      >
+        <rate
+          slot="rate"
+          score="{{item.score}}"
+        >
+        </rate>
+      </card>
+      <view
+        wx:if="{{collectionCache.length === 0}}"
+        slot="meta"
+        class="font-medium gray-color center">你还没有收藏任何内容~
+      </view>
+    </c-scroll>
+  </view>
 </view>

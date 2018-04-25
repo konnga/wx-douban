@@ -44,6 +44,5 @@
   color: #fff;
 }
 .user-collection {
-  height: 380rpx;
-  border-bottom: 5rpx solid #e6e6e6;
+  padding-top: 20rpx;
 }

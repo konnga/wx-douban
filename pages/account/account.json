@@ -1,6 +1,9 @@
 {
   "usingComponents": {
-    "loading": "../../components/loading/loading"
+    "loading": "../../components/loading/loading",
+    "c-scroll": "../../components/scroll/c-scroll",
+    "card": "../../components/card/card",
+    "rate": "../../components/rate/rate"
   },
   "enablePullDownRefresh": true,
   "onReachBottomDistance": 50
