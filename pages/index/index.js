@@ -37,7 +37,6 @@ Page({
       })
     }).catch(() => {
       this.setData({
-        inTheatersData: '暂无相关数据',
         inTheatersLoading: false
       })
     })
@@ -52,7 +51,6 @@ Page({
       })
     }).catch(() => {
       this.setData({
-        newMoviesData: '暂无相关数据',
         newMoviesLoading: false
       })
     })
@@ -67,7 +65,6 @@ Page({
       })
     }).catch(() => {
       this.setData({
-        comingSoonData: '暂无相关数据',
         comingSoonLoading: false
       })
     })
@@ -82,7 +79,6 @@ Page({
       })
     }).catch(() => {
       this.setData({
-        topData: '暂无相关数据',
         topLoading: false
       })
     })
