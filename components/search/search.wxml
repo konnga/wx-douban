@@ -1,7 +1,10 @@
-<!--components/search/search.wxml-->
-  <view class="search-wrapper">
-    <input type="text"
-      bindfocus='bindSearchFocus'
-      placeholder="搜索" 
-      class="search-input" />
-  </view>
+<view class="search-wrapper search-class">
+  <input type="text"
+    value="{{initValue}}"
+    bindconfirm="bindSearch"
+    bindinput='bindInput'
+    placeholder="搜索"
+    confirm-type="search"
+    class="search-input" />
+  <slot name="addonAfter"></slot>
+</view>
