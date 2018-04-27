@@ -5,7 +5,7 @@
     "pages/list/list",
     "pages/details/details",
     "pages/user/user",
-    "pages/search/search",
+    "pages/searchView/searchView",
     "pages/shortReview/shortReview",
     "pages/longReview/longReview",
     "pages/reviewDetail/reviewDetail",
@@ -13,13 +13,13 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#53BFF7",
+    "navigationBarBackgroundColor": "#27a6e5",
     "navigationBarTitleText": "豆轻",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
     "color": "#d6d6d6",
-    "selectedColor": "#53BFF7",
+    "selectedColor": "#27a6e5",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "list": [
