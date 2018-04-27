@@ -1,2 +1,12 @@
-<!--pages/reviewDetail/reviewDetail.wxml-->
-<text>pages/reviewDetail/reviewDetail.wxml</text>
+<view class="review-wrap">
+  <view class="font-large weight">{{detail.title}}</view>
+  <view>
+   <image class="detail-img" src="{{detail.author.avatar}}"></image>
+   <text>{{detail.author.name}}</text>
+   <rate score="{{detail.rating.value}}"></rate>
+   <text>{{detail.updated_at}}</text>
+  </view>
+  <view class="content font-medium">
+    <text>{{detail.content}}</text>
+  </view>
+</view>

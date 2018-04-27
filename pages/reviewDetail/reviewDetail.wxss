@@ -1,1 +1,12 @@
-/* pages/reviewDetail/reviewDetail.wxss */
+.review-wrap {
+  padding: 30rpx;
+}
+.detail-img {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.content {
+  text-align: justify;
+}

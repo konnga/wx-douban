@@ -121,6 +121,23 @@ Page({
     })
   },
   /**
+   * 查看影评
+   */
+  handleLongReview (e) {
+    console.log(e)
+    this.data.longComments.forEach((item) => {
+      if (item.id === e.currentTarget.dataset.id) {
+        wx.setStorage({
+          key: 'longReviewDetail',
+          data: item,
+        })
+      }
+    })
+    wx.navigateTo({
+      url: '/pages/reviewDetail/reviewDetail',
+    })
+  },
+  /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {

@@ -1,1 +1,6 @@
-{}
+{
+  "usingComponents": {
+    "rate": "../../components/rate/rate"
+  },
+  "navigationBarTitleText": "影评详情"
+}

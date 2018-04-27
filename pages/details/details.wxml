@@ -95,6 +95,8 @@
         <view
         class="gray-color">影评({{detailData.reviews_count}})</view>
         <view
+          bindtap="handleLongReview"
+          data-id="{{item.id}}"
           class="long-comments"
           wx:for="{{longComments}}"
           wx:key="id">

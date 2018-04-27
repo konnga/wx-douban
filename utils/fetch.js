@@ -1,6 +1,7 @@
 const URL1 = 'http://api.douban.com/v2';
 const URL2 = 'https://douban.uieee.com/v2';
 const URL3 = 'http://t.yushu.im/v2';
+const URL4 = 'http://111.230.90.17/v2'
 /**
  * 请求api
  * @param {String} api - 请求的api地址
