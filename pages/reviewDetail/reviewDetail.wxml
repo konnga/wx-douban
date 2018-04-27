@@ -3,7 +3,7 @@
   <view>
    <image class="detail-img" src="{{detail.author.avatar}}"></image>
    <text>{{detail.author.name}}</text>
-   <rate score="{{detail.rating.value}}"></rate>
+   <rate score="{{score}}"></rate>
    <text>{{detail.updated_at}}</text>
   </view>
   <view class="content font-medium">

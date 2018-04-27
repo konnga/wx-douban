@@ -1,22 +1,23 @@
 Page({
   data: {
-    detail: {}
+    detail: {},
+    score: 0
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const that = this;
-    wx.getStorage({
-      key: 'longReviewDetail',
-      success: function(res) {
-        const newDetail = res.data;
-        newDetail.content = newDetail.content.replace('↵', '\r\n')
-        that.setData({
-          detail: newDetail
-        })
-      },
+    const cache = wx.getStorageSync('longReviewDetail')
+    this.setData({
+      score: cache.rating.value * 2,
+      detail: cache
+    })
+  },
+  onReady: function () {
+    const cache = wx.getStorageSync('longReviewDetail')
+    this.setData({
+      score: cache.rating.value * 2,
+      detail: cache
     })
   },
   onHide: function () {
