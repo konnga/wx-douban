@@ -1,7 +1,5 @@
 const api = require('../../utils/doubanApi.js')
-const { movies } = require('../../utils/enums.js')
 const util = require('../../utils/util.js')
-const appData = getApp().globalData;
 Page({
   data: {
     detailData: {},

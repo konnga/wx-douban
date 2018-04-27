@@ -1,6 +1,5 @@
-<!--pages/list/list.wxml-->
 <view classs="list-wrap">
-  <search></search>
+  <search bindtap="handleSearch"></search>
   <loading load="{{listLoading}}">
     <view class="list-content">
         <card

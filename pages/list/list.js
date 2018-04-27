@@ -1,11 +1,6 @@
-// pages/list/list.js
 const api = require('../../utils/doubanApi.js')
 const { movies } = require('../../utils/enums.js')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     subjectList: [],
     page: 1,
@@ -67,9 +62,6 @@ Page({
       wx.hideNavigationBarLoading()
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: movies[options.type].name,
@@ -86,5 +78,10 @@ Page({
   onPullDownRefresh: function () {
     // 处理下拉刷新出现空白停顿
     wx.stopPullDownRefresh()
+  },
+  handleSearch() {
+    wx.navigateTo({
+      url: '/pages/searchView/searchView',
+    })
   }
 })

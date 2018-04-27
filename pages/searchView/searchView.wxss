@@ -1,0 +1,40 @@
+.search-in input{
+  width: 85%;
+  margin-left: 10rpx;
+  text-align: left;
+}
+.cancel-btn {
+  color: #fff;
+  padding: 5rpx;
+}
+.history-search {
+  padding: 15rpx 30rpx; 
+}
+.clear-btn {
+  float: right;
+}
+.history-item {
+  padding: 15rpx 0;
+  border-bottom: 1px solid rgba(214, 214, 214, .3);
+}
+.search-list {
+  position: absolute;
+  width: 100%;
+  z-index:101;
+  top:100rpx;
+  background:#fff;
+  padding: 0 30rpx;
+}
+.list-item-wrap {
+  display: flex;
+  justify-content: start;
+  padding: 15rpx 0; 
+  border-bottom: 1px solid rgba(214, 214, 214, .3);
+}
+.list-img image {
+  width: 150rpx;
+  height: 200rpx;
+}
+.list-text {
+   padding-left: 15rpx; 
+}

@@ -1,5 +1,5 @@
 <view class="container">
-  <search></search>
+  <search bindtap="handleSearch"></search>
   <loading load="{{inTheatersLoading}}">
     <view
       class="movies-wrap">

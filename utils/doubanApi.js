@@ -18,4 +18,8 @@ api.getMovieComments = (id, type) => {
   return fetch(`movie/subject/${id}/${type}`).then(res => res.data)
 }
 
+api.searchMovie = (text) => {
+  return fetch(`movie/search?q=${text}`).then(res => res.data)
+}
+
 module.exports = api

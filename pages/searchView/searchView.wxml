@@ -1,0 +1,61 @@
+<!--pages/search/search.wxml-->
+<view class="search-wrap">
+  <view class="search-bar">
+    <search
+      initValue="{{searchValue}}"
+      bindsearch="handleSearch"
+      bindinput="handleInput"
+      search-class="search-in">
+      <text
+        class="cancel-btn"
+        bindtap="handleCancel"
+        slot="addonAfter">取消</text>
+    </search>
+  </view>
+  <view 
+    wx:if="{{historySearch.length > 0 && !isSearch}}"
+    class="history-search font-medium">
+    <view class="history gray-color">
+      <text>历史记录</text>
+      <text class="clear-btn" bindtap="handleClear">清除</text>
+    </view>
+    <view
+      wx:for="{{historySearch}}"
+      wx:key="index"
+      class="history-item"
+      data-q="{{item}}"
+      bindtap="handleSearch"
+    >
+      {{item}}
+    </view>
+  </view>
+  <view class="hot-search">
+  </view>
+  <loading wx:if="{{searchLoading}}">
+  </loading>
+  <view
+    wx:if="{{movieList.length > 0 && isSearch}}"
+    class="search-list">
+    <view
+      class="gray-color font-small">
+      共{{movieList.length}}个搜索结果</view>
+    <navigator
+      wx:for="{{movieList}}"
+      wx:key="id"
+      url="/pages/details/details?id={{item.id}}&title={{item.title}}"
+      class="list-item-wrap">
+        <view class="list-img">
+          <image src="{{item.images.small}}"></image>
+        </view>
+        <view class="list-text">
+          <view class="weight font-medium">{{item.title}}</view>
+          <view 
+            class="gray-color font-small">
+            {{item.rating.average}}分/{{item.year}}</view>
+        </view>
+    </navigator>
+  </view>
+  <view class="gray-color center font-medium">
+    {{noData}}
+  </view>
+</view>

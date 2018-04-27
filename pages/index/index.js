@@ -1,4 +1,3 @@
-//index.js
 //获取应用实例
 const app = getApp()
 const api = require('../../utils/doubanApi.js')
@@ -86,6 +85,11 @@ Page({
         topData: '暂无相关数据',
         topLoading: false
       })
+    })
+  },
+  handleSearch () {
+    wx.navigateTo({
+      url: '/pages/searchView/searchView',
     })
   }
 })
