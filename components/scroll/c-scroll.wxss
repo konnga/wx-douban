@@ -9,7 +9,7 @@
   font-size: 32rpx;
 }
 .nav {
-  color: #53BFF7;
+  color: #27a6e5;
 }
 .nav-title {
   font-weight: 500;
@@ -18,7 +18,7 @@
   content: '';
   width: 10rpx;
   padding-right: 10rpx;
-  border-left: 6rpx solid #53BFF7;
+  border-left: 6rpx solid #27a6e5;
 }
 .nav-img {
   width: 32rpx;

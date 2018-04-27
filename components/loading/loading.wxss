@@ -1,4 +1,3 @@
-/* components/loading/loading.wxss */
 @import '../../app.wxss';
 .loading-wrap {
   position: relative;
@@ -22,7 +21,7 @@
   height: 48rpx;
   margin: 0 auto;
   border: 5rpx solid rgba(83,191,247, .2);
-  border-top-color: #53BFF7;
+  border-top-color: #27a6e5;
   animation: spin 1s infinite linear;
 }
 @keyframes spin {

@@ -70,9 +70,10 @@ Page({
     this.setData({
       userInfo: {},
       avatarUrl: '../../assets/img/user-unlogin.png',
-      logged: false
+      logged: false,
+      refresh: false,
+      collectionCache: []
     })
-    wx.clearStorage();
   },
   getUserCollec () {
     const that = this;
