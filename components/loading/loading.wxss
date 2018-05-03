@@ -1,4 +1,4 @@
-@import '../../app.wxss';
+
 .loading-wrap {
   position: relative;
   background: #fff;

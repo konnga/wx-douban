@@ -4,10 +4,7 @@
     "pages/account/account",
     "pages/list/list",
     "pages/details/details",
-    "pages/user/user",
     "pages/searchView/searchView",
-    "pages/shortReview/shortReview",
-    "pages/longReview/longReview",
     "pages/reviewDetail/reviewDetail",
     "pages/typeList/typeList"
   ],

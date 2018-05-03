@@ -97,7 +97,6 @@ Page({
       logged: wx.getStorageSync('logged') || false,
     })
     if (this.data.logged) {
-      // 同步操作导致页面出现停顿，后续处理
       const userStorage = wx.getStorageSync('userInfo');
       this.setData({
         userInfo: userStorage,

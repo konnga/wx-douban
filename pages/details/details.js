@@ -10,9 +10,6 @@ Page({
     longComments: {},
     collectionActive: 'iconfont icon-star gray-color'
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     const that = this;
     wx.setNavigationBarTitle({
@@ -124,7 +121,6 @@ Page({
    * 查看影评
    */
   handleLongReview (e) {
-    console.log(e)
     this.data.longComments.forEach((item) => {
       if (item.id === e.currentTarget.dataset.id) {
         wx.setStorage({
@@ -136,10 +132,5 @@ Page({
     wx.navigateTo({
       url: '/pages/reviewDetail/reviewDetail',
     })
-  },
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
   }
 })

@@ -1,4 +1,3 @@
-/* components/scroll/scroll.wxss */
 @import '../../app.wxss';
 .scroll-wrap {
   width: 100%;

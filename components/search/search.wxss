@@ -1,4 +1,3 @@
-/* components/search/search.wxss */
 .search-wrapper {
   display: flex;
   justify-content: center;

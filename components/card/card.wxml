@@ -1,4 +1,3 @@
-<!--components/card/card.wxml-->
 <view class="card-wrap card-class">
   <view>
     <navigator url="{{linkUrl}}">

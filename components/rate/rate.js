@@ -1,4 +1,3 @@
-// components/rate/rate.js
 Component({
   externalClasses: [
     'rate-class'

@@ -20,7 +20,6 @@ Page({
     topData: {
       subjects: []
     },
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')

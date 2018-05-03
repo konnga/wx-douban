@@ -1,4 +1,3 @@
-/* components/rate/rate.wxss */
 @import '../../app.wxss';
 .rate-wrap {
   display: flex;
