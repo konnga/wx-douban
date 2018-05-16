@@ -13,7 +13,7 @@
           wx:key="id"
           card-class="text-overflow"
           linkUrl="/pages/details/details?id={{item.id}}&title={{item.title}}"
-          imgUrl="{{item.images.small}}"
+           imgUrl="{{item.images.small}}" 
           text="{{item.title}}
         >
           <rate
@@ -23,8 +23,9 @@
           </rate>
         </card>
         <view 
+          class="center gray-color"
           wx:if="{{!inTheatersData.subjects}}"
-          name="nodata">{{inTheatersData}}</view>
+          slot="nodata">暂无相关数据</view>
       </c-scroll> 
     </view>
   </loading>
@@ -50,8 +51,9 @@
           </rate>
         </card>
         <view 
+          class="center gray-color"
           wx:if="{{!inTheatersData.subjects}}"
-          name="nodata">{{inTheatersData}}</view>
+          slot="nodata">暂无相关数据</view>
       </c-scroll> 
     </view>
   </loading>
@@ -76,8 +78,9 @@
           </rate>
         </card>
         <view 
+          class="center gray-color"
           wx:if="{{!inTheatersData.subjects}}"
-          name="nodata">{{inTheatersData}}</view>
+          slot="nodata">暂无相关数据</view>
       </c-scroll> 
     </view>
   </loading>
@@ -101,9 +104,10 @@
           >
           </rate>
         </card>
-        <view 
+        <view
+          class="center gray-color"
           wx:if="{{!inTheatersData.subjects}}"
-          name="nodata">{{inTheatersData}}</view>
+          slot="nodata">暂无相关数据</view>
       </c-scroll> 
     </view>
   </loading>

@@ -132,5 +132,16 @@ Page({
     wx.navigateTo({
       url: '/pages/reviewDetail/reviewDetail',
     })
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage (res) {
+    return {
+      imageUrl: `${this.data.detailData.images.small}`,
+      success: () => {
+        util.showSuccess('分享成功')
+      }
+    }
   }
 })

@@ -1,4 +1,3 @@
-// components/card/card.js
 Component({
   options: {
     multipleSlots: true
